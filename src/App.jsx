@@ -16,35 +16,35 @@ const FirefighterLanding = () => {
       icon: <Truck className="w-6 h-6" />,
       title: "Spannende Einsätze",
       subtitle: "& moderne Technik",
-      url: "https://feuerwehr-ulm.de/einsaetze",
+      url: "#",
       color: "from-red-50 to-red-100 hover:from-red-100 hover:to-red-200"
     },
     {
       icon: <Users className="w-6 h-6" />,
       title: "Starke Gemeinschaft",
       subtitle: "& Teamgeist",
-      url: "https://feuerwehr-ulm.de/gemeinschaft",
+      url: "#",
       color: "from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200"
     },
     {
       icon: <BookOpen className="w-6 h-6" />,
       title: "Ausbildung",
       subtitle: "& Weiterbildung",
-      url: "https://feuerwehr-ulm.de/ausbildung",
+      url: "#",
       color: "from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200"
     },
     {
       icon: <Dumbbell className="w-6 h-6" />,
       title: "Fit bleiben",
       subtitle: "& neue Skills lernen",
-      url: "https://feuerwehr-ulm.de/fitness",
+      url: "#",
       color: "from-green-50 to-green-100 hover:from-green-100 hover:to-green-200"
     },
     {
       icon: <Calendar className="w-6 h-6" />,
       title: "Events",
       subtitle: "& Kameradschaft",
-      url: "https://feuerwehr-ulm.de/events",
+      url: "#",
       color: "from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200"
     }
   ];
@@ -58,17 +58,17 @@ const FirefighterLanding = () => {
     {
       icon: <Globe className="w-6 h-6" />,
       label: "Website",
-      url: "https://feuerwehr-ulm.de/abteilung-lehr"
+      url: "https://feuerwehr-lehr.de"
     },
     {
       icon: <Mail className="w-6 h-6" />,
       label: "E-Mail",
-      url: "mailto:lehr@feuerwehr-ulm.de"
+      url: "mailto:info@fw-lehr.de"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       label: "Kontakt",
-      url: "tel:+4973150000"
+      url: "tel:+491781332770"
     }
   ];
 
@@ -167,67 +167,6 @@ const FirefighterLanding = () => {
           </div>
         </header>
 
-        {/* Main Links Section */}
-        <main 
-          className="max-w-lg mx-auto px-4 pb-8"
-          style={{
-            transform: `translateY(${scrollY * -0.03}px)`
-          }}
-        >
-          <div 
-            className="backdrop-blur-lg rounded-3xl p-6 md:p-8 shadow-2xl border border-white/10"
-            style={{
-              background: 'linear-gradient(135deg, rgba(255,255,255,0.15) 0%, rgba(255,255,255,0.05) 100%)'
-            }}
-          >
-            <div className="space-y-3">
-              {links.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`flex items-center p-4 md:p-5 bg-gradient-to-r ${link.color} rounded-2xl border-2 border-white/20 hover:border-white/40 hover:shadow-xl transition-all duration-300 group transform hover:-translate-y-1`}
-                  style={{
-                    backdropFilter: 'blur(10px)'
-                  }}
-                >
-                  <div 
-                    className="mr-4 group-hover:scale-125 transition-all duration-300"
-                    style={{ color: '#A72920' }}
-                  >
-                    {link.icon}
-                  </div>
-                  <div className="flex-1">
-                    <h3 className="font-bold text-gray-900 text-lg">{link.title}</h3>
-                    <p className="text-gray-700 text-sm font-medium">{link.subtitle}</p>
-                  </div>
-                  <ExternalLink 
-                    className="w-5 h-5 text-gray-500 group-hover:scale-110 transition-all duration-300" 
-                    style={{ color: '#A72920' }}
-                  />
-                </a>
-              ))}
-            </div>
-
-            {/* QR Code Section */}
-            <div className="mt-8 pt-6 border-t border-white/20">
-              <div className="text-center">
-                <div 
-                  className="w-32 h-32 mx-auto rounded-2xl mb-4 flex items-center justify-center shadow-lg border-2 border-white/20"
-                  style={{ backgroundColor: 'rgba(255,255,255,0.9)' }}
-                >
-                  <QrCode className="w-20 h-20" style={{ color: '#A72920' }} />
-                </div>
-                <p className="text-white font-bold text-lg drop-shadow-md">
-                  go.fw-lehr.de
-                </p>
-                <p className="text-white/80 text-sm mt-1">Scan für Direktzugriff</p>
-              </div>
-            </div>
-          </div>
-        </main>
-
         {/* Social Media Links */}
         <section 
           className="max-w-lg mx-auto px-4 pb-12"
@@ -280,7 +219,7 @@ const FirefighterLanding = () => {
               Bereit wenn's drauf ankommt
             </p>
             <div className="mt-6 text-sm opacity-75">
-              <p>© 2024 Feuerwehr Ulm - Abteilung Lehr</p>
+              <p>© 2025 Feuerwehr Ulm - Abteilung Lehr</p>
             </div>
           </div>
         </footer>
