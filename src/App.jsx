@@ -106,17 +106,9 @@ const FirefighterLanding = () => {
         <div 
           className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-30"
           style={{
-            /* 
-            Nach PNG Upload ersetzen mit:
-            backgroundImage: 'url(/path/to/firefighters.png)',
+            backgroundImage: 'url(/assets/firefighters.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
-            */
-            backgroundImage: `radial-gradient(ellipse at center, 
-              rgba(255, 215, 0, 0.1) 0%, 
-              rgba(255, 215, 0, 0.05) 30%, 
-              transparent 70%
-            )`
           }}
         />
         
