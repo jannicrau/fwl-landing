@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+@theme {
+  --color-fire-red-50: #fdf2f1;
+  --color-fire-red-100: #fbe5e3;
+  --color-fire-red-200: #f6cfcb;
+  --color-fire-red-300: #efaca6;
+  --color-fire-red-400: #e47d75;
+  --color-fire-red-500: #d4374a;
+  --color-fire-red-600: #A72920; /* RAL 3000 */
+  --color-fire-red-700: #8B1E1A;
+  --color-fire-red-800: #6B1514;
+  --color-fire-red-900: #4a0e0b;
+  
+  --color-gold: #FFD700;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
