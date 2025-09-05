@@ -64,7 +64,7 @@ const FirefighterLanding = () => {
         <div 
           className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-25"
           style={{
-            backgroundImage: 'url(/assets/firefighters.png)',
+            backgroundImage: 'url(/assets/firefighters-min.png)',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
           }}
@@ -87,7 +87,7 @@ const FirefighterLanding = () => {
           {/* Feuerwehr Badge */}
           <div >
             <div>
-              <img src="/assets/gemeinsames_logo.png" alt="Florian" className="h-45 mb-5 mx-auto" />
+              <img src="/assets/gemeinsames_logo-min.png" alt="Florian" className="h-45 mb-5 mx-auto" />
             </div>
             
             <h1 className="text-4xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl">
@@ -161,7 +161,7 @@ const FirefighterLanding = () => {
             <p className="text-lg font-medium opacity-90 max-w-md mx-auto leading-relaxed">
               Bereit wenn's drauf ankommt - du auch?
             </p>
-            <div className="mt-6 text-sm opacity-75">
+            <div className="mt-6 text-sm opacity-75 mb-20">
               <p>© 2025 Feuerwehr Ulm - Abteilung Lehr</p>
             </div>
           </div>
