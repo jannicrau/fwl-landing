@@ -55,14 +55,14 @@ const FirefighterLanding = () => {
 
       {/* Firefighter Background Image Container - Ready for PNG */}
       <div 
-        className="fixed inset-0 z-10 pointer-events-none"
+        className="fixed inset-0 z-20 pointer-events-none"
         style={{
-          transform: `translateY(${scrollY * 0.2}px) scale(${1 + scrollY * 0.0050})`
+          transform: `translateY(${scrollY * 0.2}px) scale(${1 + scrollY * 0.0020})`
         }}
       >
         {/* PNG Background Image will be placed here */}
         <div 
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-70"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-25"
           style={{
             backgroundImage: 'url(/assets/firefighters.png)',
             backgroundSize: 'cover',
@@ -85,24 +85,9 @@ const FirefighterLanding = () => {
           }}
         >
           {/* Feuerwehr Badge */}
-          <div className="mb-8">
-            <div className="w-16 h-16 md:w-24 md:h-24 mx-auto mb-6 text-white drop-shadow-lg">
-              <svg viewBox="0 0 100 100" className="w-full h-full">
-                <defs>
-                  <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#FFD700" />
-                    <stop offset="50%" stopColor="#FFA100" />
-                    <stop offset="100%" stopColor="#FF8C00" />
-                  </linearGradient>
-                </defs>
-                <path 
-                  d="M50 5 L35 20 L50 35 L65 20 Z M20 30 L35 45 L20 60 L5 45 Z M80 30 L95 45 L80 60 L65 45 Z M50 65 L35 80 L50 95 L65 80 Z" 
-                  fill="url(#badgeGradient)"
-                  className="drop-shadow-md"
-                />
-                <circle cx="50" cy="50" r="18" fill="#A72920" className="drop-shadow-sm" />
-                <circle cx="50" cy="50" r="12" fill="#FFD700" />
-              </svg>
+          <div >
+            <div>
+              <img src="/assets/gemeinsames_logo.png" alt="Florian" className="h-45 mb-5 mx-auto" />
             </div>
             
             <h1 className="text-4xl md:text-7xl font-black text-white mb-4 drop-shadow-2xl">
@@ -127,7 +112,7 @@ const FirefighterLanding = () => {
 
         {/* Social Media Links */}
         <section 
-          className="max-w-lg mx-auto px-4 pb-12"
+          className="max-w-lg mx-auto px-4 pb-10"
           style={{
             transform: `translateY(${scrollY * 0.01}px)`
           }}
@@ -158,12 +143,12 @@ const FirefighterLanding = () => {
 
         {/* Footer */}
         <footer 
-          className="text-center py-12 px-4"
+          className="text-center px-4"
           style={{
             transform: `translateY(${scrollY * 0.05}px)`
           }}
         >
-          <div className="text-white drop-shadow-lg">
+          <div className="text-white drop-shadow-lg z-10">
             <h2 className="text-3xl md:text-5xl font-black mb-2 tracking-wide">
               Feuerwehr Ulm
             </h2>
@@ -174,7 +159,7 @@ const FirefighterLanding = () => {
               Abteilung Lehr
             </h3>
             <p className="text-lg font-medium opacity-90 max-w-md mx-auto leading-relaxed">
-              Bereit wenn's drauf ankommt
+              Bereit wenn's drauf ankommt - du auch?
             </p>
             <div className="mt-6 text-sm opacity-75">
               <p>© 2025 Feuerwehr Ulm - Abteilung Lehr</p>
@@ -199,18 +184,7 @@ const FirefighterLanding = () => {
         </a>
       </div>
 
-      {/* Animated particles for atmosphere */}
-      <div 
-        className="fixed inset-0 pointer-events-none z-5"
-        style={{
-          transform: `translateY(${scrollY * 0.7}px)`
-        }}
-      >
-        <div className="absolute top-20 left-1/4 w-1 h-1 rounded-full animate-pulse" style={{ backgroundColor: '#FFD700', opacity: 0.6 }}></div>
-        <div className="absolute top-40 right-1/3 w-2 h-2 rounded-full animate-bounce" style={{ backgroundColor: '#FFD700', opacity: 0.4, animationDelay: '1s' }}></div>
-        <div className="absolute bottom-40 left-1/5 w-1 h-1 rounded-full animate-pulse" style={{ backgroundColor: '#FFD700', opacity: 0.5, animationDelay: '2s' }}></div>
-        <div className="absolute top-1/3 right-1/4 w-1 h-1 rounded-full" style={{ backgroundColor: '#A72920', opacity: 0.3 }}></div>
-      </div>
+
     </div>
   );
 };
