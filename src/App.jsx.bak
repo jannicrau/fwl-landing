@@ -1,6 +1,6 @@
 import './App.css'
 import React, { useEffect, useState } from 'react';
-import { ExternalLink, Users, BookOpen, Dumbbell, Calendar, Truck, Phone, Mail, Instagram, Globe, MessageCircleReply } from 'lucide-react';
+import { ExternalLink, Users, BookOpen, Dumbbell, Calendar, Truck, Phone, Mail, Instagram, Globe, QrCode } from 'lucide-react';
 
 const FirefighterLanding = () => {
   const [scrollY, setScrollY] = useState(0);
@@ -11,7 +11,43 @@ const FirefighterLanding = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  
+  const links = [
+    {
+      icon: <Truck className="w-6 h-6" />,
+      title: "Spannende Einsätze",
+      subtitle: "& moderne Technik",
+      url: "#",
+      color: "from-red-50 to-red-100 hover:from-red-100 hover:to-red-200"
+    },
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "Starke Gemeinschaft",
+      subtitle: "& Teamgeist",
+      url: "#",
+      color: "from-orange-50 to-orange-100 hover:from-orange-100 hover:to-orange-200"
+    },
+    {
+      icon: <BookOpen className="w-6 h-6" />,
+      title: "Ausbildung",
+      subtitle: "& Weiterbildung",
+      url: "#",
+      color: "from-yellow-50 to-yellow-100 hover:from-yellow-100 hover:to-yellow-200"
+    },
+    {
+      icon: <Dumbbell className="w-6 h-6" />,
+      title: "Fit bleiben",
+      subtitle: "& neue Skills lernen",
+      url: "#",
+      color: "from-green-50 to-green-100 hover:from-green-100 hover:to-green-200"
+    },
+    {
+      icon: <Calendar className="w-6 h-6" />,
+      title: "Events",
+      subtitle: "& Kameradschaft",
+      url: "#",
+      color: "from-blue-50 to-blue-100 hover:from-blue-100 hover:to-blue-200"
+    }
+  ];
 
   const socialLinks = [
     {
@@ -52,17 +88,23 @@ const FirefighterLanding = () => {
         }}
       />
 
+      {/* Background Pattern Overlay */}
+      <div className="absolute inset-0 opacity-[0.08]">
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform -skew-y-12 h-32 top-20 animate-pulse"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white to-transparent transform skew-y-12 h-24 top-96"></div>
+        <div className="absolute inset-0 bg-gradient-to-l from-transparent via-white to-transparent transform -skew-y-6 h-16 bottom-32"></div>
+      </div>
 
       {/* Firefighter Background Image Container - Ready for PNG */}
       <div 
         className="fixed inset-0 z-10 pointer-events-none"
         style={{
-          transform: `translateY(${scrollY * 0.2}px) scale(${1 + scrollY * 0.0050})`
+          transform: `translateY(${scrollY * 0.2}px) scale(${1 + scrollY * 0.0001})`
         }}
       >
         {/* PNG Background Image will be placed here */}
         <div 
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-70"
+          className="absolute inset-0 bg-contain bg-center bg-no-repeat opacity-30"
           style={{
             backgroundImage: 'url(/assets/firefighters.png)',
             backgroundSize: 'cover',
@@ -91,7 +133,7 @@ const FirefighterLanding = () => {
                 <defs>
                   <linearGradient id="badgeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                     <stop offset="0%" stopColor="#FFD700" />
-                    <stop offset="50%" stopColor="#FFA100" />
+                    <stop offset="50%" stopColor="#FFA500" />
                     <stop offset="100%" stopColor="#FF8C00" />
                   </linearGradient>
                 </defs>
@@ -186,16 +228,13 @@ const FirefighterLanding = () => {
       {/* Floating Contact Button */}
       <div className="fixed bottom-6 right-6 z-30">
         <a
-          href="https://wa.me/491781332770"
-          target='_blank'
+          href="tel:+4973150000"
           className="flex items-center justify-center w-14 h-14 rounded-full shadow-2xl border-2 border-white/30 backdrop-blur-sm transition-all duration-300 hover:scale-110 group"
           style={{
-            background: '#25D366',
-            border: '2px solid white'
+            background: 'linear-gradient(135deg, #A72920 0%, #8B1E1A 100%)'
           }}
         >
-          {/* <Phone className="w-6 h-6 text-white group-hover:animate-pulse" /> */}
-          <MessageCircleReply className="w-6 h-6 text-white group-hover:animate-pulse" />
+          <Phone className="w-6 h-6 text-white group-hover:animate-pulse" />
         </a>
       </div>
 
